@@ -1,0 +1,679 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-weight: 400 500 600 700 800 900;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+html{
+    overflow-x:  hidden; 
+}
+*{
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Product Sans';
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+ 
+ /* Header and Menu */
+
+.header{
+    width: 100%;
+    position: fixed;
+    padding: 5px 10px;
+    z-index: 999;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    background-color: rgb(8, 73, 130);
+    align-items: center;
+}
+.gos_logo{
+    height: 75px;
+    width: 60px;
+}
+.header_heading{
+    color: white;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.menu_icon{
+    color: rgb(242, 240, 240);
+    font-size: 27px;
+    z-index: 999;
+}
+.close_icon{
+    color: white;
+    font-size: 27px;
+    position: relative;
+    top: 5.3vh;
+    left: 91vw;
+}
+.header_list_container_styles{
+   width: 105vw;
+   height: 110vh;
+   position: fixed;
+   top: -10px;
+   left: -10px;
+   z-index: 2;
+   transition: 0.2s;
+   background-color: rgb(8, 73, 130);
+   overflow: hidden scroll;
+}
+.header_list_container_styles::-webkit-scrollbar{
+    display: none;
+}
+.header_list{
+    list-style: none;
+    position: relative;
+    top: 15vh;
+    color: white;
+    width: 90%;
+    margin: auto;
+    padding-left: 10px;
+}
+.header_list_item{
+    line-height: 60px;
+    font-size: 21px;
+   transition: 0.2s;
+   border-bottom: 1px solid rgba(4, 126, 202, 0.884);
+}
+.header_list_item:hover{
+    font-size: 23px ;
+}
+
+.header_list_container_hidden{
+   height: 0;   
+}
+
+/* Courses */
+
+.courses_word_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(4, 126, 202, 0.884);
+}
+
+.header_courses_list{
+   height: 30vh;
+   padding: 0 10px;
+   border-radius: 10px;
+   overflow: hidden scroll;
+   background-color: rgb(10, 101, 181);
+   transition: 0.3s;
+}
+.header_courses_heading{
+    line-height: 35px;
+    font-size: 21px;
+    text-align: center;
+}
+.header_courses_list_item{
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(5, 136, 218, 0.884);
+}
+.header_courses_list::-webkit-scrollbar{
+    border-radius: 20px;
+    width: 8px;
+    background-color: rgb(61, 147, 208)
+}
+.header_courses_list::-webkit-scrollbar-thumb{
+    background-color: rgb(13, 88, 128);
+    border-radius: 20px;
+}
+.header_courses_list_container_hidden{
+    height: 0;
+}
+
+/* Section 2 */
+
+.intro-apply_container{
+    width: 85vw;
+    margin: auto;
+}
+.governer_name_container{
+    margin: 0 auto;
+    margin-top: 130px;
+    text-align: center;
+}
+.governer_designation{
+    color: rgb(8, 73, 130);
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.governer_name{
+    font-size: 27px;
+    margin: 0 auto;
+    color: rgb(8, 73, 130);
+}
+.section2_initiative_intro{
+    color: rgb(84, 184, 230);
+    margin: 20px auto;
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+    line-height: 33px;
+}
+.section2_earning{
+   text-align: center;
+   color: rgb(8, 73, 130);
+   font-size: 22px;
+}
+.section2_statement{
+   text-align: center;
+   color: rgb(12, 99, 176);
+   font-size: 20px;
+}
+.section2_apply-container, .application-number_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.apply-btn{
+  color: white;
+  height: 45px;
+  width: 280px;
+  margin: auto;
+  font-size: 16.7px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  transition: scale 0.25s;
+  background-color: rgb(8, 73, 130);
+}
+.apply-btn:hover{
+    color: rgb(8, 73, 130);
+    font-size: 18px;
+    border: 2px solid rgb(8, 73, 130);
+    background-color: white;
+    scale: 1.05;
+}
+.application-number{
+  margin: 18px auto 5px auto;
+  font-size: 23px;
+  font-weight: bolder;
+  color: rgb(13, 81, 140);
+}
+.accepted-applications{
+   margin: 0 auto;
+   color: rgb(12, 99, 176);
+}
+.governer_img{
+   height: 600px;
+   width: 115vw;
+   background-color: rgb(245, 251, 255);
+   object-fit: cover;
+   padding: 20px 0;
+}
+
+/* Section 3 */
+.section3_heading{
+  color: rgb(8, 73, 130);
+  font-size: 22px;
+  text-align: center;
+  display: inline-block;
+  width: 85vw;
+  margin: 20px 7.5vw;
+}
+.section3_paragraph{
+  width: 90vw;
+  line-height: 23px;
+  font-size: 17px;
+  text-align: justify;
+  margin: auto 5vw;
+}
+
+/* Section 4 */
+.section-4{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 30px 0 0 0;
+}
+.section4_img{
+   height: 320px;
+   width: 90vw;
+   max-width: 430px;
+   border-radius: 10px;
+   margin: 15px 0;
+   object-fit: cover;
+   box-shadow: 0 20px 20px 8px rgb(163, 161, 161);
+}
+
+/* Section 5 */
+.section-5{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+hr{
+    width: 90%;
+    opacity: 0.3;
+    margin: 80px auto 20px auto;
+}
+.section5-6_heading{
+  color: rgb(8, 73, 130);
+  text-align: center;
+  font-size: 27px;
+}
+.section5-6_course_container{
+  height: auto;
+  width: 85vw;
+  max-width: 430px;
+  margin: 15px 0 20px 0;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: .3s;
+  box-shadow: 0 0 25px 5px lightgray;
+}
+.section5-6_course_container:hover{
+    scale: 1.05;
+}
+.section5-6_img{
+  width: 100%;
+  height: 70%;
+  max-height: 300px;
+}
+.section5-6_course-name{
+  font-size: 19px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(36, 35, 35);
+}
+
+/* Section 6 */
+.section-6{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+/* Footer - Last Section */
+.footer{
+   padding: 12px;
+   margin-top: 50px;
+   color: white;
+   background-color: rgb(8, 73, 130);
+}
+.footer_heading{
+  font-size: 28px;
+  text-align: center;
+  margin: 20px auto 10px auto;
+}
+.footer_icon_container{
+  height: 70px;
+  width: 80vw;
+  max-width: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer_icon{
+  height: 35px;
+  width: 35px;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+.footer_icon:hover{
+   opacity: 0.85;
+}
+.tiktok{
+   fill: white;
+   padding: 5px;
+   border-radius: 100%;
+   background-color: black;
+}
+.gmail{
+   padding: 4px;
+   border-radius: 100%;
+   background-color: rgba(255, 255, 255, 0.944);
+}
+
+@media screen and (min-width: 640px){
+
+/* Header */
+
+.gos_logo{
+    height: 85px;
+    width: 65px;
+}
+.header_heading{
+    font-size: 23px;
+}
+.menu_icon{
+    font-size: 0;
+}
+.header_list_container_styles{
+   width: 280px;
+   max-height: 300px;
+   position: relative;
+   background-color: rgb(8, 73, 130);
+}
+.header_list_container_hidden{
+   height: 100px;
+}
+
+.header_list{
+    top: 32px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.header_list_item{
+   font-size: 17px;
+   border-bottom: none;
+}
+.header_list_item:hover{
+    font-size: 18px ;
+}
+
+
+/* Courses */
+
+.courses_word_container{
+    width: 87px;
+    border-bottom: none; 
+}
+.courses_menu_icon{
+    translate: 0 2px;
+}
+.header_courses_list{
+   position: fixed;
+   top: 75px;
+   right: 0.4px;
+   height: 510px;
+   overflow: hidden;
+   color: rgb(8, 73, 130);
+   border: 3px solid rgb(8, 73, 130);
+   background-color: white;
+}
+
+.header_courses_list::-webkit-scrollbar, .header_courses_list::-webkit-scrollbar-thumb{
+    display: none;
+}
+.header_courses_heading{
+    line-height: 15px;
+}
+.header_courses_list_item{
+  padding: 12.2px 0;
+}
+.header_courses_list_container_hidden{
+    height: 0;
+}
+
+/* Section 2 */
+
+
+.governer_name_container{
+    margin-top: 170px;
+}
+.governer_designation{
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.governer_name{
+    font-size: 38px;
+}
+.section2_initiative_intro{
+    margin: 25px auto;
+    width: 60vw;
+    letter-spacing: 2px;
+    font-size: 35px;
+    line-height: 45px;
+}
+.section2_earning{
+   font-size: 25px;
+}
+.section2_statement{
+   font-size: 23px;
+}
+.section2_apply-container{
+   flex-direction: row;
+   justify-content: space-evenly;
+   margin: 40px auto 10px auto;
+}
+.apply-btn{
+   height: 50px;
+   margin: 0;
+}
+.application-number_container{
+   flex-direction: column;
+}
+.application-number{
+  margin: 0;
+  font-size: 26px;
+}
+.governer_img{
+  height: 75vh;
+  width: 115%;
+  padding: 0;
+  margin: 25px auto;
+  object-fit: contain;
+}
+
+/* Section 3 */
+.section3_heading{
+  font-size: 27px;
+  width: 90vw;
+  margin: 30px 5vw;
+}
+.section3_paragraph{
+  line-height: 28px;
+  font-size: 19px;
+}
+
+/* Section 5 */
+.section5-6_heading{
+    color: rgb(8, 73, 130);
+    text-align: left;
+    font-size: 35px;
+}
+.section5-6_course_container{
+    scale: 0.95;
+}
+.section5-6_course_container:hover{
+    scale: 1.02;
+}
+
+}
+
+@media screen and (min-width: 768px){
+ 
+/* Header  */
+
+.gos_logo{
+    height: 95px;
+    width: 75px;
+}
+.header_heading{
+    font-size: 25px;
+}
+.header_list_container_styles{
+   width: 40vw;
+   max-width: 400px;
+}
+.header_list_item{
+   font-size: 19px;
+}
+.header_list_item:hover{
+    font-size: 20px ;
+}
+
+
+/* Courses */
+
+.courses_word_container{
+    width: 95px;
+}
+.header_courses_heading{
+    line-height: 25px;
+}
+.header_courses_list{
+    height: 525px;
+}
+.header_courses_list_container_hidden{
+    height: 0;
+}
+ 
+/* Section 2 */
+.section-2{
+    display: grid;
+    grid-template-columns: auto 380px;
+    margin: 30px 0 50px 0;
+    background-color: rgb(231, 242, 249);
+}
+.intro-apply_container{
+    width: 63vw;
+    margin-left: 2vw;
+}
+.governer_designation{
+    text-align: left;
+}
+.governer_name{
+    font-size: 38px;
+    text-align: left;
+}
+.section2_initiative_intro{
+    margin: 30px 0;
+    text-align: left;
+}
+.section2_earning{
+   font-size: 25px;
+   text-align: left;
+}
+.section2_statement{
+   text-align: left;
+}
+.section2_apply-container{
+  justify-content: flex-start;
+}
+.apply-btn{
+   width: 25vw;
+   max-width: 250px;
+   margin-right: 25px;
+}
+.governer_img{
+   height: 630px;
+   width: 720px;
+   margin: 0;
+   translate: -180px 85px;
+   background: none;
+}
+
+/* Section 3 */
+.section3_heading{
+    font-size: 28px;
+}
+  .section3_paragraph{
+    line-height: 28px;
+    font-size: 20px;
+}
+
+/* Section 4 */
+.section-4{
+   flex-direction: row;
+   justify-content: space-evenly;
+   margin: 30px auto 0 auto;
+   max-width: 1200px;
+ }
+ .section4_img{
+    height: 27vw;
+    width: 30vw;
+    max-height: 335px;
+    max-width: 360px;
+    object-fit: fill;
+}
+
+/* Section 5 */
+.section-5, .section-6{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section5-6_heading{
+    text-align: center;
+    width: 100%;
+}
+.section5-6_course_container{
+    width: 30vw;
+    max-height: 335px;
+    max-width: 360px;
+}
+.section5-6_course_container:hover{
+    scale: 1.02;
+} 
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+/* Header */
+
+.header_heading, .header_heading:after{
+    font-size: 22px;
+}
+.header_heading:after{
+   content: ' On Latest Technologies';
+}
+
+/* Section 2 */
+
+.section-2{
+    height: 700px;
+}
+.intro-apply_container{
+    width: 62vw;
+    margin-left: 4vw;
+}
+.governer_designation{
+    font-size: 55px;
+    margin-bottom: 23px;
+}
+.governer_name{
+    font-size: 43px;
+}
+.section2_initiative_intro{
+    font-size: 40px;
+    line-height: 50px;
+}
+.governer_img{
+    height: 650px;
+    width: 750px;
+    margin: 0;
+    translate: -180px 89px;
+}
+.section3_heading{
+   font-size: 30px;
+}
+
+}
+
+
+
+
+
+
+
+
+

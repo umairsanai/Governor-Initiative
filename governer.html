@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="governer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Governer Initiative</title>
+    <style>
+      @font-face {
+    font-family: 'Product Sans';
+    font-weight: 400 500 600 700 800 900;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+html{
+    overflow-x:  hidden; 
+}
+*{
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Product Sans';
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+ 
+ /* Header and Menu */
+
+.header{
+    width: 100%;
+    position: fixed;
+    padding: 5px 10px;
+    z-index: 999;
+    justify-content: space-between;
+    flex-direction: row;
+    display: flex;
+    background-color: rgb(8, 73, 130);
+    align-items: center;
+}
+.gos_logo{
+    height: 75px;
+    width: 60px;
+}
+.header_heading{
+    color: white;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.menu_icon{
+    color: rgb(242, 240, 240);
+    font-size: 27px;
+    z-index: 999;
+}
+.close_icon{
+    color: white;
+    font-size: 27px;
+    position: relative;
+    top: 5.3vh;
+    left: 91vw;
+}
+.header_list_container_styles{
+   width: 105vw;
+   height: 110vh;
+   position: fixed;
+   top: -10px;
+   left: -10px;
+   z-index: 2;
+   transition: 0.2s;
+   background-color: rgb(8, 73, 130);
+   overflow: hidden scroll;
+}
+.header_list_container_styles::-webkit-scrollbar{
+    display: none;
+}
+.header_list{
+    list-style: none;
+    position: relative;
+    top: 15vh;
+    color: white;
+    width: 90%;
+    margin: auto;
+    padding-left: 10px;
+}
+.header_list_item{
+    line-height: 60px;
+    font-size: 21px;
+   transition: 0.2s;
+   border-bottom: 1px solid rgba(4, 126, 202, 0.884);
+}
+.header_list_item:hover{
+    font-size: 23px ;
+}
+
+.header_list_container_hidden{
+   height: 0;   
+}
+
+/* Courses */
+
+.courses_word_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(4, 126, 202, 0.884);
+}
+
+.header_courses_list{
+   height: 30vh;
+   padding: 0 10px;
+   border-radius: 10px;
+   overflow: hidden scroll;
+   background-color: rgb(10, 101, 181);
+   transition: 0.3s;
+}
+.header_courses_heading{
+    line-height: 35px;
+    font-size: 21px;
+    text-align: center;
+}
+.header_courses_list_item{
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(5, 136, 218, 0.884);
+}
+.header_courses_list::-webkit-scrollbar{
+    border-radius: 20px;
+    width: 8px;
+    background-color: rgb(61, 147, 208)
+}
+.header_courses_list::-webkit-scrollbar-thumb{
+    background-color: rgb(13, 88, 128);
+    border-radius: 20px;
+}
+.header_courses_list_container_hidden{
+    height: 0;
+}
+
+/* Section 2 */
+
+.intro-apply_container{
+    width: 85vw;
+    margin: auto;
+}
+.governer_name_container{
+    margin: 0 auto;
+    margin-top: 130px;
+    text-align: center;
+}
+.governer_designation{
+    color: rgb(8, 73, 130);
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.governer_name{
+    font-size: 27px;
+    margin: 0 auto;
+    color: rgb(8, 73, 130);
+}
+.section2_initiative_intro{
+    color: rgb(84, 184, 230);
+    margin: 20px auto;
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-size: 25px;
+    line-height: 33px;
+}
+.section2_earning{
+   text-align: center;
+   color: rgb(8, 73, 130);
+   font-size: 22px;
+}
+.section2_statement{
+   text-align: center;
+   color: rgb(12, 99, 176);
+   font-size: 20px;
+}
+.section2_apply-container, .application-number_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.apply-btn{
+  color: white;
+  height: 45px;
+  width: 280px;
+  margin: auto;
+  font-size: 16.7px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  transition: scale 0.25s;
+  background-color: rgb(8, 73, 130);
+}
+.apply-btn:hover{
+    color: rgb(8, 73, 130);
+    font-size: 18px;
+    border: 2px solid rgb(8, 73, 130);
+    background-color: white;
+    scale: 1.05;
+}
+.application-number{
+  margin: 18px auto 5px auto;
+  font-size: 23px;
+  font-weight: bolder;
+  color: rgb(13, 81, 140);
+}
+.accepted-applications{
+   margin: 0 auto;
+   color: rgb(12, 99, 176);
+}
+.governer_img{
+   height: 600px;
+   width: 115vw;
+   background-color: rgb(245, 251, 255);
+   object-fit: cover;
+   padding: 20px 0;
+}
+
+/* Section 3 */
+.section3_heading{
+  color: rgb(8, 73, 130);
+  font-size: 22px;
+  text-align: center;
+  display: inline-block;
+  width: 85vw;
+  margin: 20px 7.5vw;
+}
+.section3_paragraph{
+  width: 90vw;
+  line-height: 23px;
+  font-size: 17px;
+  text-align: justify;
+  margin: auto 5vw;
+}
+
+/* Section 4 */
+.section-4{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 30px 0 0 0;
+}
+.section4_img{
+   height: 320px;
+   width: 90vw;
+   max-width: 430px;
+   border-radius: 10px;
+   margin: 15px 0;
+   object-fit: cover;
+   box-shadow: 0 20px 20px 8px rgb(163, 161, 161);
+}
+
+/* Section 5 */
+.section-5{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+hr{
+    width: 90%;
+    opacity: 0.3;
+    margin: 80px auto 20px auto;
+}
+.section5-6_heading{
+  color: rgb(8, 73, 130);
+  text-align: center;
+  font-size: 27px;
+}
+.section5-6_course_container{
+  height: auto;
+  width: 85vw;
+  max-width: 430px;
+  margin: 15px 0 20px 0;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: .3s;
+  box-shadow: 0 0 25px 5px lightgray;
+}
+.section5-6_course_container:hover{
+    scale: 1.05;
+}
+.section5-6_img{
+  width: 100%;
+  height: 70%;
+  max-height: 300px;
+}
+.section5-6_course-name{
+  font-size: 19px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(36, 35, 35);
+}
+
+/* Section 6 */
+.section-6{
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+/* Footer - Last Section */
+.footer{
+   padding: 12px;
+   margin-top: 50px;
+   color: white;
+   background-color: rgb(8, 73, 130);
+}
+.footer_heading{
+  font-size: 28px;
+  text-align: center;
+  margin: 20px auto 10px auto;
+}
+.footer_icon_container{
+  height: 70px;
+  width: 80vw;
+  max-width: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer_icon{
+  height: 35px;
+  width: 35px;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+.footer_icon:hover{
+   opacity: 0.85;
+}
+.tiktok{
+   fill: white;
+   padding: 5px;
+   border-radius: 100%;
+   background-color: black;
+}
+.gmail{
+   padding: 4px;
+   border-radius: 100%;
+   background-color: rgba(255, 255, 255, 0.944);
+}
+
+@media screen and (min-width: 640px){
+
+/* Header */
+
+.gos_logo{
+    height: 85px;
+    width: 65px;
+}
+.header_heading{
+    font-size: 23px;
+}
+.menu_icon{
+    font-size: 0;
+}
+.header_list_container_styles{
+   width: 280px;
+   max-height: 300px;
+   position: relative;
+   background-color: rgb(8, 73, 130);
+}
+.header_list_container_hidden{
+   height: 100px;
+}
+
+.header_list{
+    top: 32px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.header_list_item{
+   font-size: 17px;
+   border-bottom: none;
+}
+.header_list_item:hover{
+    font-size: 18px ;
+}
+
+
+/* Courses */
+
+.courses_word_container{
+    width: 87px;
+    border-bottom: none; 
+}
+.courses_menu_icon{
+    translate: 0 2px;
+}
+.header_courses_list{
+   position: fixed;
+   top: 75px;
+   right: 0.4px;
+   height: 510px;
+   overflow: hidden;
+   color: rgb(8, 73, 130);
+   border: 3px solid rgb(8, 73, 130);
+   background-color: white;
+}
+
+.header_courses_list::-webkit-scrollbar, .header_courses_list::-webkit-scrollbar-thumb{
+    display: none;
+}
+.header_courses_heading{
+    line-height: 15px;
+}
+.header_courses_list_item{
+  padding: 12.2px 0;
+}
+.header_courses_list_container_hidden{
+    height: 0;
+}
+
+/* Section 2 */
+
+
+.governer_name_container{
+    margin-top: 170px;
+}
+.governer_designation{
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.governer_name{
+    font-size: 38px;
+}
+.section2_initiative_intro{
+    margin: 25px auto;
+    width: 60vw;
+    letter-spacing: 2px;
+    font-size: 35px;
+    line-height: 45px;
+}
+.section2_earning{
+   font-size: 25px;
+}
+.section2_statement{
+   font-size: 23px;
+}
+.section2_apply-container{
+   flex-direction: row;
+   justify-content: space-evenly;
+   margin: 40px auto 10px auto;
+}
+.apply-btn{
+   height: 50px;
+   margin: 0;
+}
+.application-number_container{
+   flex-direction: column;
+}
+.application-number{
+  margin: 0;
+  font-size: 26px;
+}
+.governer_img{
+  height: 75vh;
+  width: 115%;
+  padding: 0;
+  margin: 25px auto;
+  object-fit: contain;
+}
+
+/* Section 3 */
+.section3_heading{
+  font-size: 27px;
+  width: 90vw;
+  margin: 30px 5vw;
+}
+.section3_paragraph{
+  line-height: 28px;
+  font-size: 19px;
+}
+
+/* Section 5 */
+.section5-6_heading{
+    color: rgb(8, 73, 130);
+    text-align: left;
+    font-size: 35px;
+}
+.section5-6_course_container{
+    scale: 0.95;
+}
+.section5-6_course_container:hover{
+    scale: 1.02;
+}
+
+}
+
+@media screen and (min-width: 768px){
+ 
+/* Header  */
+
+.gos_logo{
+    height: 95px;
+    width: 75px;
+}
+.header_heading{
+    font-size: 25px;
+}
+.header_list_container_styles{
+   width: 40vw;
+   max-width: 400px;
+}
+.header_list_item{
+   font-size: 19px;
+}
+.header_list_item:hover{
+    font-size: 20px ;
+}
+
+
+/* Courses */
+
+.courses_word_container{
+    width: 95px;
+}
+.header_courses_heading{
+    line-height: 25px;
+}
+.header_courses_list{
+    height: 525px;
+}
+.header_courses_list_container_hidden{
+    height: 0;
+}
+ 
+/* Section 2 */
+.section-2{
+    display: grid;
+    grid-template-columns: auto 380px;
+    margin: 30px 0 50px 0;
+    background-color: rgb(231, 242, 249);
+}
+.intro-apply_container{
+    width: 63vw;
+    margin-left: 2vw;
+}
+.governer_designation{
+    text-align: left;
+}
+.governer_name{
+    font-size: 38px;
+    text-align: left;
+}
+.section2_initiative_intro{
+    margin: 30px 0;
+    text-align: left;
+}
+.section2_earning{
+   font-size: 25px;
+   text-align: left;
+}
+.section2_statement{
+   text-align: left;
+}
+.section2_apply-container{
+  justify-content: flex-start;
+}
+.apply-btn{
+   width: 25vw;
+   max-width: 250px;
+   margin-right: 25px;
+}
+.governer_img{
+   height: 630px;
+   width: 720px;
+   margin: 0;
+   translate: -180px 85px;
+   background: none;
+}
+
+/* Section 3 */
+.section3_heading{
+    font-size: 28px;
+}
+  .section3_paragraph{
+    line-height: 28px;
+    font-size: 20px;
+}
+
+/* Section 4 */
+.section-4{
+   flex-direction: row;
+   justify-content: space-evenly;
+   margin: 30px auto 0 auto;
+   max-width: 1200px;
+ }
+ .section4_img{
+    height: 27vw;
+    width: 30vw;
+    max-height: 335px;
+    max-width: 360px;
+    object-fit: fill;
+}
+
+/* Section 5 */
+.section-5, .section-6{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section5-6_heading{
+    text-align: center;
+    width: 100%;
+}
+.section5-6_course_container{
+    width: 30vw;
+    max-height: 335px;
+    max-width: 360px;
+}
+.section5-6_course_container:hover{
+    scale: 1.02;
+} 
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+/* Header */
+
+.header_heading, .header_heading:after{
+    font-size: 22px;
+}
+.header_heading:after{
+   content: ' On Latest Technologies';
+}
+
+/* Section 2 */
+
+.section-2{
+    height: 700px;
+}
+.intro-apply_container{
+    width: 62vw;
+    margin-left: 4vw;
+}
+.governer_designation{
+    font-size: 55px;
+    margin-bottom: 23px;
+}
+.governer_name{
+    font-size: 43px;
+}
+.section2_initiative_intro{
+    font-size: 40px;
+    line-height: 50px;
+}
+.governer_img{
+    height: 650px;
+    width: 750px;
+    margin: 0;
+    translate: -180px 89px;
+}
+.section3_heading{
+   font-size: 30px;
+}
+
+}
+
+</style>
+</head>
+<body>
+    
+    <div class="header">
+
+         <img src="logo.webp" alt="" class="gos_logo">
+         <span class="header_heading" >Tution Free Program</span>
+         <i class=" menu_icon fa-solid fa-bars"></i>
+          
+         <div class="header_list_container_styles header_list_container header_list_container_hidden list">
+             <ul class="header_list">
+                <li class="header_list_item">Home</li>
+                <li class="header_list_item">Apply</li>
+                
+                <div class="courses_word_container">
+                     <span class="header_list_item">Courses</span><i class="courses_menu_icon fa-solid fa-angle-down"></i></div>
+                       
+                     <ul id="list2" class=" header_courses_list header_courses_list_container_hidden">
+                          <h2 class="header_courses_heading">Core Courses</h2>
+                         
+                          <li class="header_courses_list_item">Programming Fundamentals</li>
+                          <li class="header_courses_list_item">Web2 Using NextJS</li>
+                          <li class="header_courses_list_item">Earn as You Learn</li>
+                         
+                          <h2 class="header_courses_heading">Advanced Courses</h2>
+                         
+                          <li class="header_courses_list_item">Web 3 and Metaverse</li>
+                          <li class="header_courses_list_item">Cloud-Native Computing</li>
+                          <li class="header_courses_list_item">Artificial Intelligence (AI) and Deep Learning</li>
+                          <li class="header_courses_list_item">Ambient Computing and IoT</li>
+                          <li class="header_courses_list_item">Genomics and Bioinformatics</li>
+                          <li class="header_courses_list_item">Network Programmability and Automation</li>
+                     </ul>
+               
+                
+                <li class="header_list_item">Jobs</li>
+             </ul>
+         </div>
+   </div>
+       
+
+    <!-- Introduction, Application and Image  
+                  Section 2        -->
+
+ <section class="section-2">
+
+      <div class="intro-apply_container">
+           
+          <div class="governer_name_container">
+            <h2 class="governer_designation">Governer Sindh</h2> 
+            <p class="governer_name">Kamran Khan Tessori</p>
+          </div>
+           
+          <h2 class="section2_initiative_intro">Initiative for <br> Artificial Intelligence, Web 3.0 & Metaverse</h2>
+           
+          <h3 class="section2_earning">Earn up to $5000 / month</h3>
+           
+          <p class="section2_statement">Opening the Governor House and Removing Barriers to Educate the Youth of Sindh</p>
+           
+           <div class="section2_apply-container">
+               <button class="apply-btn">APPLY NOW</button>
+                <div class="application-number_container">
+                   <p class="application-number">999,999</p> 
+                   <p class="accepted-applications">Accepted Applications</p>
+                </div>
+           </div>
+      </div>          
+         
+      <img src="governer.webp" alt="" class="governer_img">
+  </section>
+  
+  <!-- Section 3 -->
+    <section class="section-3">
+      <h3 class="section3_heading">Certified AI, Metaverse, and Web 3.0 Developer and 
+          Solopreneur Developing Billion-Dollar
+          Valued Developers and Solopreneurs</h3>
+      <p class="section3_paragraph">
+        The pace of technological change is accelerating, big players like Microsoft, Amazon, Google, and OpenAI are winning by providing infrastructure, large AI foundation models, frameworks, 3D Metaverse experiences, and massive distribution networks. Solopreneurs trained in this program will win by automating work typically outsourced to employees, by directly connecting to customers by eliminating the middleman, and by developing vertical metaverses, thus paving the way for the first billion-dollar valued solopreneur businesses. This program has the objective to train this new breed of billion-dollar solopreneurs. These solopreneurs will adopt the ultra-lean business model and work independently and will not need to hire employees or other team members.
+      </p>
+    </section>
+
+
+  <!-- Section 4 -->
+   <section class="section-4">
+       <img src="image-1.webp" alt="" class="section4_img">
+       <img src="slogans.webp" alt="" class="section4_img">
+       <img src="it-desk.webp" alt="" class="section4_img">
+
+   </section> <hr>
+
+  <!-- Section 5 -->
+  <section class="section-5">
+     <h2 class="section5-6_heading">Core Courses Sequence</h2>
+     
+      <div class="section5-6_course_container">
+        <img src="programming_fundamentals.webp" alt="" class="section5-6_img">
+        <p class="section5-6_course-name">Programming Fundamentals</p>
+      </div>
+    
+      <div class="section5-6_course_container">
+        <img src="nextjs.webp" alt="" class="section5-6_img">
+        <p class="section5-6_course-name">Web2 Using NextJS</p>
+      </div>
+
+      <div class="section5-6_course_container">
+        <img src="earn_as_your_learn.webp" alt="" class="section5-6_img">
+        <p class="section5-6_course-name">Earn as You Learn </p>
+      </div>
+  </section>
+
+  <!-- Section 6 -->
+  <section class="section-6">
+    <h2 class="section5-6_heading">Advanced Courses</h2>
+ 
+      <div class="section5-6_course_container">
+        <img src="AI.webp" alt="" class="section5-6_img">
+        <p class="section5-6_course-name">Artificial Intelligence</p>
+      </div>
+
+      <div class="section5-6_course_container">
+        <img src="metaverse.webp" alt="" class="section5-6_img">
+        <p class="section5-6_course-name">Web 3 & Metaverse</p>
+      </div>
+      
+      <div class="section5-6_course_container">
+        <img src="cloudComputing.webp" alt="" class="section5-6_img">
+        <p class="section5-6_course-name">Cloud-Native Computing</p>
+      </div>
+      
+      <div class="section5-6_course_container">
+        <img src="iot.webp" alt="" class="section5-6_img">
+        <p class="section5-6_course-name">Ambient Computing and IoT</p>
+      </div>
+      
+      <div class="section5-6_course_container">
+        <img src="genomics.webp" alt="" class="section5-6_img">
+        <p class="section5-6_course-name">Genomics & Bioinformatics</p>
+      </div>
+      
+      <div class="section5-6_course_container">
+        <img src="automation.webp" alt="" class="section5-6_img">
+        <p class="section5-6_course-name">Network Programmability & Automation</p>
+      </div>
+
+    </section>
+
+
+    <section class="footer">
+        <h2 class="footer_heading">Follow Us</h2>
+        <div class="footer_icon_container">
+           <svg class="footer_icon" xmlns="http://www.w3.org/2000/svg" data-name="Ebene 1" viewBox="0 0 1024 1024" id="facebook-logo-2019"><path fill="#1877f2" d="M1024,512C1024,229.23016,794.76978,0,512,0S0,229.23016,0,512c0,255.554,187.231,467.37012,432,505.77777V660H302V512H432V399.2C432,270.87982,508.43854,200,625.38922,200,681.40765,200,740,210,740,210V336H675.43713C611.83508,336,592,375.46667,592,415.95728V512H734L711.3,660H592v357.77777C836.769,979.37012,1024,767.554,1024,512Z"></path><path fill="#fff" d="M711.3,660,734,512H592V415.95728C592,375.46667,611.83508,336,675.43713,336H740V210s-58.59235-10-114.61078-10C508.43854,200,432,270.87982,432,399.2V512H302V660H432v357.77777a517.39619,517.39619,0,0,0,160,0V660Z"></path></svg>
+           <svg class="footer_icon" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 128 128" id="movie"><circle cx="64" cy="64" r="64" fill="#e21a20"></circle><path fill="#fff" fill-rule="evenodd" d="M98.62 53.92c-.49-6.75-1.72-13.72-10.35-14.23a426.5 426.5 0 0 0-48.55 0c-8.63.5-9.86 7.48-10.35 14.23a135 135 0 0 0 0 20.16c.49 6.75 1.72 13.72 10.35 14.23a426.5 426.5 0 0 0 48.55 0c8.63-.5 9.86-7.48 10.35-14.23a135 135 0 0 0 0-20.16ZM57 73V53l19 10Z"></path></svg>  
+           <svg class="footer_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.87 28.87" id="twitter"><g data-name="Layer 2"><g data-name="Layer 1"><rect width="28.87" height="28.87" fill="#00c7ff" rx="6.48" ry="6.48"></rect><path fill="#fff" fill-rule="evenodd" d="M11.74 18.11a3.29 3.29 0 0 1-3.05-2.28 3.26 3.26 0 0 0 1.41 0A3.28 3.28 0 0 1 8 14.26a3.18 3.18 0 0 1-.48-1.75 3.24 3.24 0 0 0 1.46.4 3.3 3.3 0 0 1-1.35-2A3.25 3.25 0 0 1 8 8.54 9.39 9.39 0 0 0 14.76 12c0-.13 0-.24-.05-.36a3.28 3.28 0 0 1 5.58-2.74.17.17 0 0 0 .17.05 6.6 6.6 0 0 0 1.91-.73A3.36 3.36 0 0 1 21 10a6.3 6.3 0 0 0 1.83-.49l-.33.49a6.44 6.44 0 0 1-1.19 1.13.11.11 0 0 0-.05.1 9.09 9.09 0 0 1-.06 1.46 9.66 9.66 0 0 1-.85 2.92 9.44 9.44 0 0 1-1.77 2.59 8.77 8.77 0 0 1-4.51 2.51 9.79 9.79 0 0 1-1.83.22A9.27 9.27 0 0 1 7 19.52l-.08-.05a6.64 6.64 0 0 0 3.26-.47 6.53 6.53 0 0 0 1.56-.89z"></path></g></g></svg>
+           <svg class="footer_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-name="Layer 1" viewBox="0 0 128 128" id="instagram"><defs><clipPath id="b"><circle cx="64" cy="64" r="64" fill="none"></circle></clipPath><clipPath id="c"><path fill="none" d="M104-163H24a24.07 24.07 0 0 0-24 24v80a24.07 24.07 0 0 0 24 24h80a24.07 24.07 0 0 0 24-24v-80a24.07 24.07 0 0 0-24-24Zm16 104a16 16 0 0 1-16 16H24A16 16 0 0 1 8-59v-80a16 16 0 0 1 16-16h80a16 16 0 0 1 16 16Z"></path></clipPath><clipPath id="e"><circle cx="82" cy="209" r="5" fill="none"></circle></clipPath><clipPath id="g"><path fill="none" d="M64-115a16 16 0 0 0-16 16 16 16 0 0 0 16 16 16 16 0 0 0 16-16 16 16 0 0 0-16-16Zm0 24a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8Z"></path></clipPath><clipPath id="h"><path fill="none" d="M84-63H44a16 16 0 0 1-16-16v-40a16 16 0 0 1 16-16h40a16 16 0 0 1 16 16v40a16 16 0 0 1-16 16Zm-40-64a8 8 0 0 0-8 8v40a8 8 0 0 0 8 8h40a8 8 0 0 0 8-8v-40a8 8 0 0 0-8-8Z"></path></clipPath><clipPath id="i"><circle cx="82" cy="-117" r="5" fill="none"></circle></clipPath><radialGradient id="a" cx="27.5" cy="121.5" r="137.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffd676"></stop><stop offset=".25" stop-color="#f2a454"></stop><stop offset=".38" stop-color="#f05c3c"></stop><stop offset=".7" stop-color="#c22f86"></stop><stop offset=".96" stop-color="#6666ad"></stop><stop offset=".99" stop-color="#5c6cb2"></stop></radialGradient><radialGradient id="d" cx="27.5" cy="-41.5" r="148.5" xlink:href="#a"></radialGradient><radialGradient id="f" cx="13.87" cy="303.38" r="185.63" xlink:href="#a"></radialGradient><radialGradient id="j" cx="13.87" cy="-22.62" r="185.63" xlink:href="#a"></radialGradient></defs><g clip-path="url(#b)"><circle cx="27.5" cy="121.5" r="137.5" fill="url(#a)"></circle></g><g clip-path="url(#c)"><circle cx="27.5" cy="-41.5" r="148.5" fill="url(#d)"></circle></g><g clip-path="url(#e)"><circle cx="13.87" cy="303.38" r="185.63" fill="url(#f)"></circle></g><g clip-path="url(#g)"><circle cx="27.5" cy="-41.5" r="148.5" fill="url(#d)"></circle></g><g clip-path="url(#h)"><circle cx="27.5" cy="-41.5" r="148.5" fill="url(#d)"></circle></g><g clip-path="url(#i)"><circle cx="13.87" cy="-22.62" r="185.63" fill="url(#j)"></circle></g><circle cx="82" cy="46" r="5" fill="#fff"></circle><path fill="#fff" d="M64 48a16 16 0 1 0 16 16 16 16 0 0 0-16-16Zm0 24a8 8 0 1 1 8-8 8 8 0 0 1-8 8Z"></path><rect width="64" height="64" x="32" y="32" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="8" rx="12" ry="12"></rect></svg>
+           <svg class="footer_icon tiktok" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="icons"><path d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"/></svg>
+           <svg class="footer_icon gmail" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"/><path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"/><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"/><path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"/><path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"/></svg>
+        </div>
+
+
+    </section>
+
+  <script>
+        let menuIcon = document.querySelector('.menu_icon');
+        let closeIcon = document.querySelector('.close_icon')
+        let list = document.querySelector('.list');
+  
+        menuIcon.addEventListener('click', function() {
+      if (list.classList.contains('header_list_container_hidden')) {
+        list.classList.remove('header_list_container_hidden');
+      } else {
+        list.classList.add('header_list_container_hidden');
+      }
+    });
+  
+
+     let image = document.querySelector('.courses_word_container');
+     let list2 = document.getElementById('list2');
+    
+    image.addEventListener('click', function() {
+      if (list2.classList.contains('header_courses_list_container_hidden')) {
+        list2.classList.remove('header_courses_list_container_hidden');
+      } 
+      else {
+        list2.classList.add('header_courses_list_container_hidden');
+      }
+    });
+
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>
